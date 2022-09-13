@@ -8,7 +8,6 @@ package com.jap.ticketing.service;
 import com.jap.ticketing.model.BusTicket;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,11 +15,14 @@ import java.util.List;
 
 public class ReadTicketData {
 
-    public List<BusTicket> busTicketList(String fileNAme){
+    public List<BusTicket> busTicketList(String fileNAme) {
         List<BusTicket> busTicketList = new ArrayList<>();
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))){
-
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))) {
+            String readLine = bufferedReader.readLine();
+            while ((readLine = bufferedReader.readLine()) != null) {
+                String [] data = readLine.split(",");
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
