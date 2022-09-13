@@ -12,14 +12,10 @@ import java.util.List;
 
 public class BusTicketService {
 
-    public List<BusTicket> getAllTicketDetailSortedByDistanceTravelled(List<BusTicket> busTicketList){
+    public List<BusTicket> getAllTicketDetailSortedByDistanceTravelled(List<BusTicket> busTicketList) {
 
-        Comparator<BusTicket> BusTicketComparator = new Comparator<BusTicket>() {
-            @Override
-            public int compare(BusTicket o1, BusTicket o2) {
-                return Double.compare(o2.getTravelledKM(),o1.getTravelledKM());
-            }
-        };busTicketList.sort(BusTicketComparator);
+        Comparator<BusTicket> BusTicketComparator = (BusTicket o1, BusTicket o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM());
+        busTicketList.sort(BusTicketComparator);
         return busTicketList;
     }
 }
