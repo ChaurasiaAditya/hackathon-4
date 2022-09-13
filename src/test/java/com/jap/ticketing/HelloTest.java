@@ -17,24 +17,26 @@ public class HelloTest {
     String fileName = "src/test/resources/sample.csv";
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         readTicketData = new ReadTicketData();
         busTicketService = new BusTicketService();
     }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         readTicketData = null;
         busTicketService = null;
     }
 
     @Test
-    public void givenBusTicketDataFileReturnTheNUmberOfListPresentInFile(){
-    List<BusTicket> output = readTicketData.busTicketList(fileName);
-    Assertions.assertEquals(49,output.size());
+    public void givenBusTicketDataFileReturnTheNUmberOfListPresentInFile() {
+        List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
+        Assertions.assertEquals(49, busTicketList.size(),"Error in reading file correctly");
     }
 
-    public void givenBusTicketListReturnSortedListByDistanceTravelled(){
 
+    public void givenBusTicketListReturnSortedListByDistanceTravelled() {
+        List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
+        Assertions.assertEquals(49.5,busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList).get(0).getTravelledKM(),"List is Not Sorted");
     }
 }
