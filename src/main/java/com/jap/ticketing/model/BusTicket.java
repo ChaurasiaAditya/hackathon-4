@@ -16,4 +16,7 @@ public class BusTicket {
     private String ticketTime;
     private double totalTicketAMount;
     private double travelledKM;
+
+    public BusTicket() {
+    }
 }
