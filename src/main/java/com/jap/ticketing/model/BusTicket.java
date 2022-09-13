@@ -5,6 +5,8 @@
  */
 package com.jap.ticketing.model;
 
+import java.util.Objects;
+
 public class BusTicket {
     private String scheduleNumber;
     private String routeNumber;
@@ -120,5 +122,18 @@ public class BusTicket {
 
     public void setTravelledKM(double travelledKM) {
         this.travelledKM = travelledKM;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BusTicket busTicket = (BusTicket) o;
+        return ticketFromStopId == busTicket.ticketFromStopId && ticketFromStopSeqNumber == busTicket.ticketFromStopSeqNumber && ticketTillStopId == busTicket.ticketTillStopId && ticketTillStopSeqNumber == busTicket.ticketTillStopSeqNumber && Double.compare(busTicket.totalTicketAMount, totalTicketAMount) == 0 && Double.compare(busTicket.travelledKM, travelledKM) == 0 && Objects.equals(scheduleNumber, busTicket.scheduleNumber) && Objects.equals(routeNumber, busTicket.routeNumber) && Objects.equals(ticketDate, busTicket.ticketDate) && Objects.equals(ticketTime, busTicket.ticketTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(scheduleNumber, routeNumber, ticketFromStopId, ticketFromStopSeqNumber, ticketTillStopId, ticketTillStopSeqNumber, ticketDate, ticketTime, totalTicketAMount, travelledKM);
     }
 }
