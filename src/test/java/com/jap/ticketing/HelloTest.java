@@ -35,9 +35,14 @@ public class HelloTest {
     }
 
     @Test
-    public void givenBusTicketListReturnSortedListByDistanceTravelled() {
+    public void givenBusTicketListReturnSortedListByDistanceTravelledSuccess() {
         List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
         Assertions.assertEquals(49.5,busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList).get(0).getTravelledKM(),"List is Not Sorted");
+    }
+    @Test
+    public void givenBusTicketListReturnSortedListByDistanceTravelledFailure() {
+        List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
+        Assertions.assertNotEquals(45.3,busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList).get(0).getTravelledKM(),"List is Not Sorted");
     }
 
     @Test
