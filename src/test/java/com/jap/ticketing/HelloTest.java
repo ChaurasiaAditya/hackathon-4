@@ -40,7 +40,9 @@ public class HelloTest {
         Assertions.assertEquals(49.5,busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList).get(0).getTravelledKM(),"List is Not Sorted");
     }
 
+    @Test
     public void givenBusTicketListReturnTotalAMountCollectedFromTickets(){
-
+        List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
+        Assertions.assertEquals(10348.0,busTicketService.totalCollectionsMadeFromSales(busTicketList));
     }
 }
