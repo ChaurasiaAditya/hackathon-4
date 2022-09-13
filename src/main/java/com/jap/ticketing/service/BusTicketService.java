@@ -18,4 +18,8 @@ public class BusTicketService {
         busTicketList.sort(BusTicketComparator);
         return busTicketList;
     }
+
+    public double totalCollectionsMadeFromSales(List<BusTicket> busTicketList) {
+        return 0.0;
+    }
 }
