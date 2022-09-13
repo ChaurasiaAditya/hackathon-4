@@ -22,27 +22,27 @@ public class BusTicket {
     public BusTicket() {
     }
 
-//    public BusTicket(String scheduleNumber,
-//                     String routeNumber,
-//                     int ticketFromStopId,
-//                     int ticketFromStopSeqNumber,
-//                     int ticketTillStopId,
-//                     int ticketTillStopSeqNumber,
-//                     String ticketDate,
-//                     String ticketTime,
-//                     double totalTicketAMount,
-//                     double travelledKM) {
-//        this.scheduleNumber = scheduleNumber;
-//        this.routeNumber = routeNumber;
-//        this.ticketFromStopId = ticketFromStopId;
-//        this.ticketFromStopSeqNumber = ticketFromStopSeqNumber;
-//        this.ticketTillStopId = ticketTillStopId;
-//        this.ticketTillStopSeqNumber = ticketTillStopSeqNumber;
-//        this.ticketDate = ticketDate;
-//        this.ticketTime = ticketTime;
-//        this.totalTicketAMount = totalTicketAMount;
-//        this.travelledKM = travelledKM;
-//    }
+    public BusTicket(String scheduleNumber,
+                     String routeNumber,
+                     int ticketFromStopId,
+                     int ticketFromStopSeqNumber,
+                     int ticketTillStopId,
+                     int ticketTillStopSeqNumber,
+                     String ticketDate,
+                     String ticketTime,
+                     double totalTicketAMount,
+                     double travelledKM) {
+        this.scheduleNumber = scheduleNumber;
+        this.routeNumber = routeNumber;
+        this.ticketFromStopId = ticketFromStopId;
+        this.ticketFromStopSeqNumber = ticketFromStopSeqNumber;
+        this.ticketTillStopId = ticketTillStopId;
+        this.ticketTillStopSeqNumber = ticketTillStopSeqNumber;
+        this.ticketDate = ticketDate;
+        this.ticketTime = ticketTime;
+        this.totalTicketAMount = totalTicketAMount;
+        this.travelledKM = travelledKM;
+    }
 
 
     public double getTotalTicketAMount() {
