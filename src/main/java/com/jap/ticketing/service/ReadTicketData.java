@@ -21,7 +21,7 @@ public class ReadTicketData {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))) {
             String readLine = bufferedReader.readLine();
             while ((readLine = bufferedReader.readLine()) != null) {
-                String [] data = readLine.split(",");
+                String[] data = readLine.split(",");
                 String scheduledNumber = data[0].trim();
                 String routeNumber = data[1].trim();
                 int ticketFromStopId = Integer.parseInt(data[2].trim());
@@ -31,8 +31,19 @@ public class ReadTicketData {
                 String ticketDate = data[6].trim();
                 String ticketTime = data[7].trim();
                 double totalTicketAMount = Double.parseDouble(data[8].trim());
-                double travelledKM = Double.parseDouble(data[9].trim());;
+                double travelledKM = Double.parseDouble(data[9].trim());
 
+                BusTicket busTicket = new BusTicket(scheduledNumber,
+                        routeNumber,
+                        ticketFromStopId,
+                        ticketFromStopSeqNumber,
+                        ticketTillStopId,
+                        ticketTillStopSeqNumber,
+                        ticketDate,
+                        ticketTime,
+                        totalTicketAMount,
+                        travelledKM);
+                busTicketList.add(busTicket);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
