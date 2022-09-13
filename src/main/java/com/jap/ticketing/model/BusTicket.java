@@ -136,4 +136,20 @@ public class BusTicket {
     public int hashCode() {
         return Objects.hash(scheduleNumber, routeNumber, ticketFromStopId, ticketFromStopSeqNumber, ticketTillStopId, ticketTillStopSeqNumber, ticketDate, ticketTime, totalTicketAMount, travelledKM);
     }
+
+    @Override
+    public String toString() {
+        return "BusTicket{" +
+                "scheduleNumber='" + scheduleNumber + '\'' +
+                ", routeNumber='" + routeNumber + '\'' +
+                ", ticketFromStopId=" + ticketFromStopId +
+                ", ticketFromStopSeqNumber=" + ticketFromStopSeqNumber +
+                ", ticketTillStopId=" + ticketTillStopId +
+                ", ticketTillStopSeqNumber=" + ticketTillStopSeqNumber +
+                ", ticketDate='" + ticketDate + '\'' +
+                ", ticketTime='" + ticketTime + '\'' +
+                ", totalTicketAMount=" + totalTicketAMount +
+                ", travelledKM=" + travelledKM +
+                '}';
+    }
 }
