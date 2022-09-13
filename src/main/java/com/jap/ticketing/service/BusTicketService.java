@@ -35,10 +35,6 @@ public class BusTicketService {
      * @return The total amount of money collected from all the tickets sold.
      */
     public double totalCollectionsMadeFromSales(List<BusTicket> busTicketList) {
-        double totalCollection = 0.0;
-        for (BusTicket busTicket : busTicketList) {
-            totalCollection += busTicket.getTotalTicketAMount();
-        }
-        return totalCollection;
+        return busTicketList.stream().mapToDouble(BusTicket::getTotalTicketAMount).sum();
     }
 }

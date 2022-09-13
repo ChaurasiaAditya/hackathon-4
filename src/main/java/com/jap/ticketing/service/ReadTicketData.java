@@ -25,7 +25,7 @@ public class ReadTicketData {
         List<BusTicket> busTicketList = new ArrayList<>();
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))) {
-            String readLine = bufferedReader.readLine();
+            String readLine ;
             while ((readLine = bufferedReader.readLine()) != null) {
                 String[] data = readLine.split(",");
                 String scheduledNumber = data[0].trim();
@@ -51,10 +51,9 @@ public class ReadTicketData {
                         travelledKM);
                 busTicketList.add(busTicket);
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
         }
-
         return busTicketList;
     }
 }
