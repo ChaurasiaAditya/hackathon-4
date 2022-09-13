@@ -22,27 +22,27 @@ public class BusTicket {
     public BusTicket() {
     }
 
-    public BusTicket(String scheduleNumber,
-                     String routeNumber,
-                     int ticketFromStopId,
-                     int ticketFromStopSeqNumber,
-                     int ticketTillStopId,
-                     int ticketTillStopSeqNumber,
-                     String ticketDate,
-                     String ticketTime,
-                     double totalTicketAMount,
-                     double travelledKM) {
-        this.scheduleNumber = scheduleNumber;
-        this.routeNumber = routeNumber;
-        this.ticketFromStopId = ticketFromStopId;
-        this.ticketFromStopSeqNumber = ticketFromStopSeqNumber;
-        this.ticketTillStopId = ticketTillStopId;
-        this.ticketTillStopSeqNumber = ticketTillStopSeqNumber;
-        this.ticketDate = ticketDate;
-        this.ticketTime = ticketTime;
-        this.totalTicketAMount = totalTicketAMount;
-        this.travelledKM = travelledKM;
-    }
+//    public BusTicket(String scheduleNumber,
+//                     String routeNumber,
+//                     int ticketFromStopId,
+//                     int ticketFromStopSeqNumber,
+//                     int ticketTillStopId,
+//                     int ticketTillStopSeqNumber,
+//                     String ticketDate,
+//                     String ticketTime,
+//                     double totalTicketAMount,
+//                     double travelledKM) {
+//        this.scheduleNumber = scheduleNumber;
+//        this.routeNumber = routeNumber;
+//        this.ticketFromStopId = ticketFromStopId;
+//        this.ticketFromStopSeqNumber = ticketFromStopSeqNumber;
+//        this.ticketTillStopId = ticketTillStopId;
+//        this.ticketTillStopSeqNumber = ticketTillStopSeqNumber;
+//        this.ticketDate = ticketDate;
+//        this.ticketTime = ticketTime;
+//        this.totalTicketAMount = totalTicketAMount;
+//        this.travelledKM = travelledKM;
+//    }
 
 
     public double getTotalTicketAMount() {
@@ -51,6 +51,78 @@ public class BusTicket {
 
     public double getTravelledKM() {
         return travelledKM;
+    }
+
+    public String getScheduleNumber() {
+        return scheduleNumber;
+    }
+
+    public void setScheduleNumber(String scheduleNumber) {
+        this.scheduleNumber = scheduleNumber;
+    }
+
+    public String getRouteNumber() {
+        return routeNumber;
+    }
+
+    public void setRouteNumber(String routeNumber) {
+        this.routeNumber = routeNumber;
+    }
+
+    public int getTicketFromStopId() {
+        return ticketFromStopId;
+    }
+
+    public void setTicketFromStopId(int ticketFromStopId) {
+        this.ticketFromStopId = ticketFromStopId;
+    }
+
+    public int getTicketFromStopSeqNumber() {
+        return ticketFromStopSeqNumber;
+    }
+
+    public void setTicketFromStopSeqNumber(int ticketFromStopSeqNumber) {
+        this.ticketFromStopSeqNumber = ticketFromStopSeqNumber;
+    }
+
+    public int getTicketTillStopId() {
+        return ticketTillStopId;
+    }
+
+    public void setTicketTillStopId(int ticketTillStopId) {
+        this.ticketTillStopId = ticketTillStopId;
+    }
+
+    public int getTicketTillStopSeqNumber() {
+        return ticketTillStopSeqNumber;
+    }
+
+    public void setTicketTillStopSeqNumber(int ticketTillStopSeqNumber) {
+        this.ticketTillStopSeqNumber = ticketTillStopSeqNumber;
+    }
+
+    public String getTicketDate() {
+        return ticketDate;
+    }
+
+    public void setTicketDate(String ticketDate) {
+        this.ticketDate = ticketDate;
+    }
+
+    public String getTicketTime() {
+        return ticketTime;
+    }
+
+    public void setTicketTime(String ticketTime) {
+        this.ticketTime = ticketTime;
+    }
+
+    public void setTotalTicketAMount(double totalTicketAMount) {
+        this.totalTicketAMount = totalTicketAMount;
+    }
+
+    public void setTravelledKM(double travelledKM) {
+        this.travelledKM = travelledKM;
     }
 
     @Override
@@ -68,17 +140,16 @@ public class BusTicket {
 
     @Override
     public String toString() {
-        return "BusTicket : { " +
-                "scheduleNumber = " + scheduleNumber + '\'' +
-                ", routeNumber = " + routeNumber + '\'' +
-                ", ticketFromStopId = " + ticketFromStopId +
-                ", ticketFromStopSeqNumber = " + ticketFromStopSeqNumber +
-                ", ticketTillStopId = " + ticketTillStopId +
-                ", ticketTillStopSeqNumber = " + ticketTillStopSeqNumber +
-                ", ticketDate = " + ticketDate + '\'' +
-                ", ticketTime =" + ticketTime + '\'' +
-                ", totalTicketAMount = " + totalTicketAMount +
-                ", travelledKM = " + travelledKM +
-                " } \n";
+        return  "\t" + getScheduleNumber() +
+                "\t \t" + getRouteNumber() +
+                "\t \t" + getTicketFromStopId() +
+                "\t \t \t \t " + getTicketFromStopSeqNumber() +
+                "\t \t \t \t \t" + getTicketTillStopId() +
+                "\t \t \t \t \t " + getTicketTillStopSeqNumber() +
+                "\t \t \t  \t" + getTicketDate() +
+                "\t \t \t " + getTicketTime() +
+                "\t \t \t" + getTotalTicketAMount() +
+                "\t \t \t" + getTravelledKM() +
+                "\n";
     }
 }

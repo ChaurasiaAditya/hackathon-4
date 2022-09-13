@@ -22,7 +22,7 @@ public class BusTicketService {
      */
     public List<BusTicket> getAllTicketDetailSortedByDistanceTravelled(List<BusTicket> busTicketList) {
 
-        Comparator<BusTicket> BusTicketComparator = (BusTicket o1, BusTicket o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM());
+        Comparator<BusTicket> BusTicketComparator = (o1,o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM());
         busTicketList.sort(BusTicketComparator);
         return busTicketList;
     }

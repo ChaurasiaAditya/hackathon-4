@@ -28,27 +28,17 @@ public class ReadTicketData {
             String readLine = bufferedReader.readLine();
             while ((readLine = bufferedReader.readLine()) != null) {
                 String[] data = readLine.split(",");
-                String scheduledNumber = data[0].trim();
-                String routeNumber = data[1].trim();
-                int ticketFromStopId = Integer.parseInt(data[2].trim());
-                int ticketFromStopSeqNumber = Integer.parseInt(data[3].trim());
-                int ticketTillStopId = Integer.parseInt(data[4].trim());
-                int ticketTillStopSeqNumber = Integer.parseInt(data[5].trim());
-                String ticketDate = data[6].trim();
-                String ticketTime = data[7].trim();
-                double totalTicketAMount = Double.parseDouble(data[8].trim());
-                double travelledKM = Double.parseDouble(data[9].trim());
-
-                BusTicket busTicket = new BusTicket(scheduledNumber,
-                        routeNumber,
-                        ticketFromStopId,
-                        ticketFromStopSeqNumber,
-                        ticketTillStopId,
-                        ticketTillStopSeqNumber,
-                        ticketDate,
-                        ticketTime,
-                        totalTicketAMount,
-                        travelledKM);
+                BusTicket busTicket = new BusTicket();
+                busTicket.setScheduleNumber(data[0].trim());
+                busTicket.setRouteNumber(data[1].trim());
+                busTicket.setTicketFromStopId(Integer.parseInt(data[2].trim()));
+                busTicket.setTicketFromStopSeqNumber(Integer.parseInt(data[3].trim()));
+                busTicket.setTicketTillStopId(Integer.parseInt(data[4].trim()));
+                busTicket.setTicketTillStopSeqNumber(Integer.parseInt(data[3].trim()));
+                busTicket.setTicketDate(data[6].trim());
+                busTicket.setTicketTime(data[7].trim());
+                busTicket.setTotalTicketAMount(Double.parseDouble(data[8].trim()));
+                busTicket.setTravelledKM(Double.parseDouble(data[9].trim()));
                 busTicketList.add(busTicket);
             }
         } catch (IOException exception) {
