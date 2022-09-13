@@ -10,9 +10,10 @@ public class HelloTest {
     ReadTicketData readTicketData;
     BusTicketService busTicketService;
 
-
+    @BeforeEach
     public void setUp(){
-
+        readTicketData = new ReadTicketData();
+        busTicketService = new BusTicketService();
     }
 
 }
