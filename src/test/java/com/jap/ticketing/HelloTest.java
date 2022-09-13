@@ -41,8 +41,14 @@ public class HelloTest {
     }
 
     @Test
-    public void givenBusTicketListReturnTotalAMountCollectedFromTickets(){
+    public void givenBusTicketListReturnTotalAMountCollectedFromTicketsSuccess(){
         List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
         Assertions.assertEquals(10348.0,busTicketService.totalCollectionsMadeFromSales(busTicketList));
+    }
+
+    @Test
+    public void givenBusTicketListReturnTotalAMountCollectedFromTicketsFailure(){
+        List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
+        Assertions.assertNotEquals(12350.0,busTicketService.totalCollectionsMadeFromSales(busTicketList));
     }
 }
