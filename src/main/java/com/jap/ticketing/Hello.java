@@ -1,5 +1,6 @@
 package com.jap.ticketing;
 import com.jap.ticketing.model.BusTicket;
+import com.jap.ticketing.service.BusTicketService;
 import com.jap.ticketing.service.ReadTicketData;
 import java.util.List;
 
@@ -15,5 +16,8 @@ public class Hello {
 
         // Print the bus Ticket List
         System.out.println(busTicketList);
+
+        // Create an object for Bus Ticket service
+        BusTicketService busTicketService = new BusTicketService();
     }
 }
