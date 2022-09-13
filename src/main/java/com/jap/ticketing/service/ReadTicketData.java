@@ -25,7 +25,7 @@ public class ReadTicketData {
         List<BusTicket> busTicketList = new ArrayList<>();
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))) {
-            String readLine ;
+            String readLine = bufferedReader.readLine();
             while ((readLine = bufferedReader.readLine()) != null) {
                 String[] data = readLine.split(",");
                 String scheduledNumber = data[0].trim();
