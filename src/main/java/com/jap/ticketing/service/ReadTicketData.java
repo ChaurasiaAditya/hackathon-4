@@ -22,10 +22,22 @@ public class ReadTicketData {
             String readLine = bufferedReader.readLine();
             while ((readLine = bufferedReader.readLine()) != null) {
                 String [] data = readLine.split(",");
+                String scheduledNumber = data[0].trim();
+                String routeNumber = data[1].trim();
+                int ticketFromStopId = Integer.parseInt(data[2].trim());
+                int ticketFromStopSeqNumber = Integer.parseInt(data[3].trim());
+                int ticketTillStopId = Integer.parseInt(data[4].trim());
+                int ticketTillStopSeqNumber = Integer.parseInt(data[5].trim());
+                String ticketDate = data[6].trim();
+                String ticketTime = data[7].trim();
+                double totalTicketAMount = Double.parseDouble(data[8].trim());
+                double travelledKM = Double.parseDouble(data[9].trim());;
+
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return busTicketList;
     }
 }
