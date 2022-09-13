@@ -1,8 +1,11 @@
 package com.jap.ticketing;
 
+import com.jap.ticketing.service.BusTicketService;
+import com.jap.ticketing.service.ReadTicketData;
+
 public class Hello {
 
     public static void main(String[] args) {
-        System.out.println("Hello");
+        ReadTicketData readTicketData = new ReadTicketData();
     }
 }
