@@ -34,7 +34,7 @@ public class HelloTest {
         Assertions.assertEquals(49, busTicketList.size(),"Error in reading file correctly");
     }
 
-
+    @Test
     public void givenBusTicketListReturnSortedListByDistanceTravelled() {
         List<BusTicket> busTicketList = readTicketData.busTicketList(fileName);
         Assertions.assertEquals(49.5,busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList).get(0).getTravelledKM(),"List is Not Sorted");
