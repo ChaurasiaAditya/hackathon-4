@@ -22,5 +22,8 @@ public class Hello {
 
         // Call the Sorted method and Store in an Array List
         List<BusTicket> sortedBusTicketList = busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList);
+
+        // Print the sorted Bus Ticket List
+        System.out.println(sortedBusTicketList);
     }
 }
