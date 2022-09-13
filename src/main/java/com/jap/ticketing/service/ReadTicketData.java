@@ -5,5 +5,13 @@
  */
 package com.jap.ticketing.service;
 
+import com.jap.ticketing.model.BusTicket;
+
+import java.util.List;
+
 public class ReadTicketData {
+
+    public List<BusTicket> busTicketList(String fileNAme){
+        return null;
+    }
 }
