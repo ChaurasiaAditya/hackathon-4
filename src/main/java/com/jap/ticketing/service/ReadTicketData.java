@@ -15,6 +15,12 @@ import java.util.List;
 
 public class ReadTicketData {
 
+    /**
+     * It reads the file line by line, splits the line by comma, and creates a BusTicket object from the data
+     *
+     * @param fileNAme The name of the file to read from.
+     * @return A list of BusTicket objects.
+     */
     public List<BusTicket> busTicketList(String fileNAme) {
         List<BusTicket> busTicketList = new ArrayList<>();
 
