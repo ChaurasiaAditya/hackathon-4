@@ -12,5 +12,8 @@ public class Hello {
 
         // Call the read ticket method and store in an Array List
         List<BusTicket> busTicketList = readTicketData.busTicketList("src/main/resources/sample.csv");
+
+        // Print the bus Ticket List
+        System.out.println(busTicketList);
     }
 }
