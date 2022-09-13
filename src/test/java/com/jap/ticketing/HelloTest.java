@@ -16,4 +16,8 @@ public class HelloTest {
         readTicketData = new ReadTicketData();
         busTicketService = new BusTicketService();
     }
+
+    public void tearDown(){
+
+    }
 }
