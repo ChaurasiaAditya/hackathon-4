@@ -19,5 +19,8 @@ public class Hello {
 
         // Create an object for Bus Ticket service
         BusTicketService busTicketService = new BusTicketService();
+
+        // Call the Sorted method and Store in an Array List
+        List<BusTicket> sortedBusTicketList = busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList);
     }
 }
