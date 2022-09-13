@@ -3,6 +3,7 @@
  * Date: 13-09-2022
  * Created With: IntelliJ IDEA Community Edition
  */
+
 package com.jap.ticketing.service;
 
 import com.jap.ticketing.model.BusTicket;
@@ -20,6 +21,10 @@ public class BusTicketService {
     }
 
     public double totalCollectionsMadeFromSales(List<BusTicket> busTicketList) {
-        return 0.0;
+        double totalCollection = 0.0;
+        for (BusTicket busTicket : busTicketList) {
+            totalCollection += busTicket.getTotalTicketAMount();
+        }
+        return totalCollection;
     }
 }
