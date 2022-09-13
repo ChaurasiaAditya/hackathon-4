@@ -11,7 +11,7 @@ import com.jap.ticketing.model.BusTicket;
 import java.util.Comparator;
 import java.util.List;
 
-public class BusTicketService {
+public class TicketService {
 
     /**
      * This function takes a list of BusTicket objects as input and returns a list of BusTicket objects sorted by the

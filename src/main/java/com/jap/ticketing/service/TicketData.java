@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadTicketData {
+public class TicketData {
 
     /**
      * It reads the file line by line, splits the line by comma, and creates a BusTicket object from the data
