@@ -11,5 +11,8 @@ public class HelloTest {
     BusTicketService busTicketService;
 
 
+    public void setUp(){
+
+    }
 
 }
