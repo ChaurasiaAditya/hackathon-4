@@ -33,4 +33,8 @@ public class HelloTest {
     List<BusTicket> output = readTicketData.busTicketList(fileName);
     Assertions.assertEquals(49,output.size());
     }
+
+    public void givenBusTicketListReturnSortedListByDistanceTravelled(){
+
+    }
 }
