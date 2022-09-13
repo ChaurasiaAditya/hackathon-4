@@ -1,7 +1,9 @@
 package com.jap.ticketing;
+
 import com.jap.ticketing.model.BusTicket;
 import com.jap.ticketing.service.BusTicketService;
 import com.jap.ticketing.service.ReadTicketData;
+
 import java.util.List;
 
 public class Hello {
@@ -23,10 +25,13 @@ public class Hello {
         // Call the Sorted method and Store in an Array List
         List<BusTicket> sortedBusTicketList = busTicketService.getAllTicketDetailSortedByDistanceTravelled(busTicketList);
 
-        // Print the Bus Ticket List
+        // Print the Sorted Bus Ticket List
         System.out.println(sortedBusTicketList);
 
         // call the total collection method and Store the amount in a variable
         double totalCollectionsFromBus = busTicketService.totalCollectionsMadeFromSales(busTicketList);
+
+        // Print the Total Collection from Tickets
+        System.out.println("Total Collection From Tickets = $" + totalCollectionsFromBus);
     }
 }
