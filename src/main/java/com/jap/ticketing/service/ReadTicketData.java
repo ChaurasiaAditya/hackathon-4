@@ -7,11 +7,23 @@ package com.jap.ticketing.service;
 
 import com.jap.ticketing.model.BusTicket;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReadTicketData {
 
     public List<BusTicket> busTicketList(String fileNAme){
-        return null;
+        List<BusTicket> busTicketList = new ArrayList<>();
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileNAme))){
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return busTicketList;
     }
 }
