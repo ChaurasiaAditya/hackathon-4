@@ -5,5 +5,13 @@
  */
 package com.jap.ticketing.service;
 
+import com.jap.ticketing.model.BusTicket;
+
+import java.util.List;
+
 public class BusTicketService {
+
+    public List<BusTicket> getAllTicketDetailSortedByDistanceTravelled(List<BusTicket> busTicketList){
+        return null;
+    }
 }
